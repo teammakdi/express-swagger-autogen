@@ -8,6 +8,7 @@ const port = 3000
 
 app.use('/internal/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
+// swagger doc not generated for PURGE api
 app.purge('/api/queue/:id', (req, res) => {
     // #swagger.summary = 'Purge API'
     // #swagger.description = 'Purge API'
